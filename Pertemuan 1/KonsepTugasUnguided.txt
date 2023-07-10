@@ -1,0 +1,80 @@
+Perusahaan "Kokomonana Logistic Transportation"
+Jenis pengiriman yang tersedia
+1. Jasa Pengiriman Melalui Kontainer
+2. Jasa Pengiriman Melalui Kapal Laut
+3. Jasa Pengiriman Melalui Pesawat
+4. Jasa Pengiriman Melalui Truck
+==========================================================
+Pajak PPN 1% dan PPh 2%
+1. Jasa Pengiriman Melalui Container (Khusus Pulau Jawa & Bali)
+	1. DKI Jakarta
+		('DKI Jakarta', 'Reguler', 1, 14000),
+		('DKI Jakarta', 'Seller', 10, 8000),
+		('DKI Jakarta', 'Ekspress', 1, 17500),
+		('Banten', 'Reguler', 1, 14000),
+	2. Banten
+		1. Per 1Kg = Rp 14.000 (Reguler) Min 1Kg
+		2. Per 1Kg = Rp 8.000 (Seller) Min 10Kg
+		3. Per 1Kg = Rp 17.500 (Ekspress) Min 1Kg
+	3. Jawa Barat
+		1. Per 1Kg = Rp 14.000 (Reguler) Min 1Kg
+		2. Per 1Kg = Rp 8.000 (Seller) Min 10Kg
+		3. Per 1Kg = Rp 17.500 (Ekspress) Min 1Kg
+	4. Jawa Tengah
+		1. Per 1Kg = Rp 14.000 (Reguler) Min 1Kg
+		2. Per 1Kg = Rp 8.000 (Seller) Min 10Kg
+		3. Per 1Kg = Rp 17.500 (Ekspress) Min 1Kg
+	5. DI Yogyakarta
+		1. Per 1Kg = Rp 14.000 (Reguler) Min 1Kg
+		2. Per 1Kg = Rp 8.000 (Seller) Min 10Kg
+		3. Per 1Kg = Rp 17.500 (Ekspress) Min 1Kg
+	6. Jawa Timur
+		1. Per 1Kg = Rp 14.000 (Reguler) Min 1Kg
+		2. Per 1Kg = Rp 8.000 (Seller) Min 10Kg
+		3. Per 1Kg = Rp 17.500 (Ekspress) Min 1Kg
+	7. Bali
+		1. Per 1Kg = Rp 15.000 (Reguler) Min 1Kg
+		2. Per 1Kg = Rp 9.000 (Seller) Min 10Kg
+		3. Per 1Kg = Rp 18.500 (Ekspress) Min 1Kg
+2. Jasa Pengiriman Melalui Kapal Laut
+	1. Per 1Kg = Rp 9.000 (Reguler) Min 1Kg
+	2. Per 1Kg = Rp 6.500 (Seller) Min 10Kg - 4999Kg
+	3. Per 1Kg = Rp 5.000 (Biggest) >5000Kg
+	4. Per 1Kg = Rp 4.500 (Container) 24.000Kg
+3. Jasa Pengiriman Melalui Pesawat
+	1. Per 1 Kg = Rp 18.500 (Reguler) Maks 7Kg
+4. Jasa Pengiriman Melalui Truck (Khusus Pulau Jawa & Bali)
+		1. DKI Jakarta
+			1. Per 1Kg = Rp 17.000 (Reguler) Min 1Kg
+			2. Per 1Kg = Rp 9.000 (Seller) Min 10Kg
+			3. Per 1Kg = Rp 20.500 (Ekspress) Min 1Kg
+		2. Banten
+			1. Per 1Kg = Rp 14.000 (Reguler) Min 1Kg
+			2. Per 1Kg = Rp 7.000 (Seller) Min 10Kg
+			3. Per 1Kg = Rp 15.500 (Ekspress) Min 1Kg
+		3. Jawa Barat
+			1. Per 1Kg = Rp 14.000 (Reguler) Min 1Kg
+			2. Per 1Kg = Rp 8.000 (Seller) Min 10Kg
+			3. Per 1Kg = Rp 16.500 (Ekspress) Min 1Kg
+		4. Jawa Tengah
+			1. Per 1Kg = Rp 13.000 (Reguler) Min 1Kg
+			2. Per 1Kg = Rp 6.000 (Seller) Min 10Kg
+			3. Per 1Kg = Rp 14.500 (Ekspress) Min 1Kg
+		5. DI Yogyakarta
+			1. Per 1Kg = Rp 15.000 (Reguler) Min 1Kg
+			2. Per 1Kg = Rp 7.500 (Seller) Min 10Kg
+			3. Per 1Kg = Rp 16.500 (Ekspress) Min 1Kg
+		6. Jawa Timur
+			1. Per 1Kg = Rp 17.000 (Reguler) Min 1Kg
+			2. Per 1Kg = Rp 9.000 (Seller) Min 10Kg
+			3. Per 1Kg = Rp 19.500 (Ekspress) Min 1Kg
+		7. Bali
+			1. Per 1Kg = Rp 21.000 (Reguler) Min 1Kg
+			2. Per 1Kg = Rp 10.000 (Seller) Min 10Kg
+			3. Per 1Kg = Rp 24.500 (Ekspress) Min 1Kg
+
+
+
+
+
+

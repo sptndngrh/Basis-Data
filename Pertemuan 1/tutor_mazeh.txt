@@ -1,0 +1,60 @@
+Tutorial Database Create:
+Install XAMPP
+
+Aktifkan Apache dulu baru MySql di XAMPP
+
+Kalau udah ijo semua, masuk ke shell XAMPP
+
+ketik "mysql -u root"
+
+ketik "SHOW DATABASES;" untuk melihat database apa aja yang ada di PC
+
+ketik "CREATE DATABASE nama_database;" semisal seperti ini "CREATE DATABASE db_mahasiswa;
+untuk membuat database
+
+lalu ketik "USE nama_database;" semisal seperti ini"USE db_mahasiswa;" untuk menggunakan database
+
+lalu ketik seperti ini untuk membuat tabel,
+CREATE TABLE mahasiswa (
+    nim VARCHAR(8),
+    nama VARCHAR(64),
+    jenis_kelamin ENUM('L', 'P'),
+    jurusan VARCHAR(32)
+);
+di ketik di terminal XAMPP nya
+
+lalu ketik "SHOW TABLES;"
+
+lalu ketik "DESC mahasiswa;"
+
+lalu ketik seperti ini untuk memasukkan data ke semua kolom,
+INSERT INTO mahasiswa
+VALUES ('19104027', 'Satria Adi Nugraha', 'L', 'S1 RPL'),
+       ('21104038', 'Fauzaan Hafidz Ammar Dhani', 'L', 'S1 RPL'),
+       ('21104051', 'Tegar Dwi Leksono', 'L', 'S1 RPL');
+
+lalu ketik seperti ini untuk memasukkan data ke kolom tertentu aja,
+INSERT INTO mahasiswa (nim, nama)
+VALUES ('21104060', 'Septiandi Nugraha')
+
+lalu ketik seperti ini untuk menampilkan semua data,
+SELECT * FROM mahasiswa
+
+lalu ketik seperti ini untuk menampilkan data tertentu aja,
+SELECT nama,
+       nim
+FROM mahasiswa;
+
+lalu ketik seperti ini untuk hapus semua data,
+DELETE FROM mahasiswa;
+
+lalu ketik seperti ini untuk hapus data tertentu aja,
+DELETE FROM mahasiswa
+WHERE nim = '21104051'
+
+lalu ketik seperti ini untuk hapus tabel, 
+DROP TABLE mahasiswa;
+
+lalu ketik seperti ini untuk hapus database,
+DROP DATABASE db_mahasiswa;
+

@@ -1,0 +1,96 @@
+-- Active: 1673587978324@@127.0.0.1@3306@ittp_akademik_21104060
+--------------------Nomor 1--------------------
+CREATE DATABASE ittp_akademik_21104060;
+
+--------------------Nomor 2--------------------
+CREATE TABLE dosen_21104060 (
+    nidn VARCHAR(10) PRIMARY KEY NOT NULL,
+    nama_dosen VARCHAR(10),
+    alamat VARCHAR(15)
+);
+
+CREATE TABLE mahasiswa_21104060 (
+    nim VARCHAR(10) PRIMARY KEY NOT NULL,
+    nama_mhs VARCHAR(15),
+    jk VARCHAR(10),
+    umur INT,
+    dosen VARCHAR(10),
+    FOREIGN KEY (dosen) REFERENCES dosen_21104060 (nidn)
+);
+
+CREATE TABLE matakuliah_21104060 (
+    kode_matkul VARCHAR(10) PRIMARY KEY NOT NULL,
+    nama_matkul VARCHAR(15),
+    sks INT,
+    dosen_pengampu VARCHAR(10),
+    hari VARCHAR(10),
+    kode_ruang VARCHAR(10),
+    FOREIGN KEY (dosen_pengampu) REFERENCES dosen_21104060 (nidn)
+);
+
+CREATE TABLE krs_21104060 (
+    id_krs VARCHAR(10) PRIMARY KEY NOT NULL,
+    kode_matkul VARCHAR(10),
+    nim VARCHAR(10),
+    Semester VARCHAR(10),
+    Nilai VARCHAR(10),
+    FOREIGN KEY (kode_matkul) REFERENCES matakuliah_21104060 (kode_matkul),
+    FOREIGN KEY (nim) REFERENCES mahasiswa_21104060 (nim)
+);
+
+DESC dosen_21104060;
+DESC mahasiswa_21104060;
+DESC matakuliah_21104060;
+DESC krs_21104060;
+--------------------Nomor 3--------------------
+INSERT INTO dosen_21104060
+VALUES ('123401', 'Jojon', 'Surabaya'),
+       ('123402', 'Sendy', 'Purwokerto'),
+       ('123403', 'Zacky', 'Semarang'),
+       ('123404', 'Nugraha', 'Cirebon');
+
+INSERT INTO mahasiswa_21104060
+VALUES ('20487', 'Naili', 'P', 20, '123401'),
+       ('20481', 'Huda', 'L', 22, '123401'),
+       ('20475', 'Jenny', 'P', 24, '123402'),
+       ('20470', 'Satria', 'L', 20, '123403'),
+       ('24060', 'Nugraha', 'L', 20, '123404');
+
+INSERT INTO matakuliah_21104060
+VALUES ('PW001', 'Pemrograman Web', 3, '123401', 'Senin', 'DC201'),
+       ('MA002', 'Metode Agile', 2, '123402', 'Rabu', 'DC203'),
+       ('CV003', 'Computer Vision', 2, '123401', 'Rabu', 'IOT104'),
+       ('BD004', 'Basis Data', 2, '123403', 'Jumat', 'IOT105');      
+
+INSERT INTO krs_21104060
+VALUES ('K0011', 'PW001', '20475', 'Genap', 'A'),
+       ('K0012', 'MA002', '20487', 'Genap', 'AB'),
+       ('K0013', 'BD004', '20481', 'Genap', 'B'),
+       ('K0014', 'PW001', '20470', 'Genap', 'A');
+
+--------------------Nomor 4--------------------
+SELECT * FROM mahasiswa_21104060 WHERE umur >= 20;
+
+--------------------Nomor 5--------------------
+SELECT * FROM matakuliah_21104060 WHERE sks = 2 AND hari = 'Rabu';
+
+--------------------Nomor 6--------------------
+UPDATE dosen_21104060 SET nama_dosen = 'Jonny' WHERE nama_dosen = 'Jojon';
+
+--------------------Nomor 7--------------------
+SELECT nama_dosen FROM dosen_21104060 WHERE nama_dosen LIKE '%y';
+
+--------------------Nomor 8--------------------
+SELECT dosen_21104060.nidn,
+dosen_21104060.nama_dosen, 
+matakuliah_21104060.nama_matkul,
+matakuliah_21104060.hari,
+matakuliah_21104060.kode_ruang
+FROM dosen_21104060 INNER JOIN matakuliah_21104060 
+ON dosen_21104060.nidn = matakuliah_21104060.dosen_pengampu;
+
+--------------------Nomor 9--------------------
+SELECT * FROM matakuliah_21104060 ORDER BY nama_matkul ASC;
+
+--------------------Nomor 10--------------------
+SELECT COUNT(*) FROM mahasiswa_21104060;
